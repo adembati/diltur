@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Yönetim Paneli - Türkiye Turları</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <svg class="logo-icon" viewBox="0 0 100 100" width="40" height="40">
+                    <path d="M50 10 L60 40 L90 40 L67 60 L77 90 L50 70 L23 90 L33 60 L10 40 L40 40 Z" fill="#C41E3A"/>
+                </svg>
+                <span class="logo-text">Türkiye<br><small>TURLARI</small></span>
+            </div>
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">← Siteye Dön</a>
+            </div>
+            <div class="navbar-right">
+                <button type="button" class="btn btn-secondary" id="logoutBtn" style="display:none;">Çıkış Yap</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login -->
+    <section id="adminLogin" class="admin-login">
+        <h1>Yönetim Paneli Girişi</h1>
+        <p>Supabase Dashboard'dan oluşturduğunuz admin hesabıyla giriş yapın.</p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>E-Posta</label>
+                <input type="email" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label>Şifre</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <p class="admin-error" id="loginError" style="display:none;"></p>
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+        </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="adminDashboard" class="admin-dashboard" style="display:none;">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Yönetim Paneli</h1>
+                <span id="adminEmail" class="admin-status admin-status-active"></span>
+            </div>
+
+            <div class="admin-tabs">
+                <button type="button" class="admin-tab active" data-tab="tours">Turlar</button>
+                <button type="button" class="admin-tab" data-tab="blog">Blog</button>
+                <button type="button" class="admin-tab" data-tab="messages">Mesajlar</button>
+                <button type="button" class="admin-tab" data-tab="bookings">Rezervasyonlar</button>
+                <button type="button" class="admin-tab" data-tab="newsletter">Newsletter</button>
+                <button type="button" class="admin-tab" data-tab="apikeys">API Anahtarları</button>
+            </div>
+
+            <div class="admin-panel active" id="panel-tours">
+                <div class="admin-panel-header">
+                    <h2>Turlar</h2>
+                    <button type="button" class="btn btn-primary" id="addTourBtn">+ Yeni Tur</button>
+                </div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="toursTableBody"></tbody></table></div>
+            </div>
+
+            <div class="admin-panel" id="panel-blog">
+                <div class="admin-panel-header">
+                    <h2>Blog Yazıları</h2>
+                    <button type="button" class="btn btn-primary" id="addBlogBtn">+ Yeni Yazı</button>
+                </div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="blogTableBody"></tbody></table></div>
+            </div>
+
+            <div class="admin-panel" id="panel-messages">
+                <div class="admin-panel-header"><h2>İletişim Mesajları</h2></div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="messagesTableBody"></tbody></table></div>
+            </div>
+
+            <div class="admin-panel" id="panel-bookings">
+                <div class="admin-panel-header"><h2>Rezervasyon Talepleri</h2></div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="bookingsTableBody"></tbody></table></div>
+            </div>
+
+            <div class="admin-panel" id="panel-newsletter">
+                <div class="admin-panel-header">
+                    <h2>Newsletter Aboneleri</h2>
+                    <button type="button" class="btn btn-outline" id="exportNewsletterBtn">CSV Olarak İndir</button>
+                </div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="newsletterTableBody"></tbody></table></div>
+            </div>
+
+            <div class="admin-panel" id="panel-apikeys">
+                <div class="admin-panel-header">
+                    <h2>Acente API Anahtarları</h2>
+                    <button type="button" class="btn btn-primary" id="addApiKeyBtn">+ Yeni Anahtar</button>
+                </div>
+                <div class="admin-table-wrap"><table class="admin-table"><thead></thead><tbody id="apikeysTableBody"></tbody></table></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Türkiye Turları. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

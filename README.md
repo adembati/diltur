@@ -13,13 +13,20 @@ diltur/
 ├── iletisim.html          # İletişim ve forma
 ├── css/
 │   └── style.css          # Tüm CSS stilleri
+├── admin.html              # Yönetim paneli (nav menüsünde yok, doğrudan URL ile açılır)
 ├── js/
 │   ├── script.js          # UI davranışları (menü, animasyonlar)
 │   ├── supabase-client.js # Supabase bağlantısı ve veri fonksiyonları
-│   └── app.js              # Turlar/blog render + form gönderimleri
+│   ├── app.js              # Turlar/blog render + form gönderimleri
+│   └── admin.js            # Yönetim paneli mantığı (giriş + CRUD)
 ├── supabase/
 │   ├── schema.sql          # Veritabanı tabloları ve RLS politikaları
-│   └── seed.sql            # Başlangıç verisi (8 tur, 6 blog yazısı)
+│   ├── seed.sql            # Başlangıç verisi (8 tur, 6 blog yazısı)
+│   ├── api_keys.sql        # Acente API'si için anahtar tablosu
+│   ├── admin.sql            # Yönetim paneli için admin yetkilendirmesi
+│   └── functions/
+│       └── agency-api/     # Acenteler için API key korumalı Edge Function
+├── API.md                  # Acente API'si dokümantasyonu
 └── README.md              # Bu dosya
 ```
 
@@ -33,6 +40,24 @@ Site, tur/blog içeriğini ve form gönderimlerini (iletişim, newsletter, rezer
 4. `js/supabase-client.js` dosyasının en üstündeki `SUPABASE_URL` ve `SUPABASE_ANON_KEY` değerlerini bu bilgilerle doldurun.
 
 Bu iki değer doldurulana kadar turlar/blog bölümleri "yükleniyor" mesajı gösterir; formlar ise hata verir. Site `file://` ile değil, bir HTTP sunucusu üzerinden açılmalıdır (aşağıdaki "Başlangıç" bölümüne bakın) — modül script'leri tarayıcılar tarafından dosya protokolünden çalıştırılmaz.
+
+## 🔌 Acente API'si
+
+Seyahat acenteleri turları ve blog içeriğini kendi sistemlerine çekmek için API key korumalı, salt-okunur bir REST API kullanabilir. Kurulum ve kullanım detayları için [API.md](API.md) dosyasına bakın.
+
+## 🔐 Yönetim Paneli
+
+`admin.html`, turları, blog yazılarını, gelen iletişim mesajlarını, rezervasyon taleplerini, newsletter abonelerini ve acente API anahtarlarını SQL yazmadan yönetebileceğiniz bir panel. Nav menüsünde görünmez — doğrudan `admin.html` adresinden açılır, girişte Supabase Auth kullanılır.
+
+**Kurulum (veritabanı kurulumundan sonra, tek seferlik):**
+
+1. Supabase Dashboard → **Authentication → Users → Add user** ile kendi giriş hesabınızı oluşturun (e-posta + şifre).
+2. SQL Editor'de `supabase/admin.sql` dosyasını çalıştırın.
+3. Aynı sayfada, oluşturduğunuz kullanıcının UUID'sini (Authentication → Users listesinden) kopyalayıp dosyanın en altındaki örnek `insert into admin_users (...)` satırını doldurup ayrıca çalıştırın.
+4. *(Önerilir)* Authentication → Providers → Email'de "Allow new users to sign up" seçeneğini kapatın — panel zaten `admin_users` listesine bakıyor ama bu ekstra bir güvenlik katmanı.
+5. `admin.html`'i açıp adım 1'deki bilgilerle giriş yapın.
+
+Birden fazla kişiye erişim vermek isterseniz, her biri için 1-3. adımları tekrarlayın (her kullanıcı ayrı bir `admin_users` satırı olarak eklenir).
 
 ## 🎨 Sayfalar
 

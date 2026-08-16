@@ -12,7 +12,7 @@ export function isSupabaseConfigured() {
     return SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY';
 }
 
-async function getClient() {
+export async function getSupabaseClient() {
     if (!isSupabaseConfigured()) return null;
     if (!supabase) {
         const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
@@ -20,6 +20,8 @@ async function getClient() {
     }
     return supabase;
 }
+
+const getClient = getSupabaseClient;
 
 export async function fetchTours({ featuredOnly = false } = {}) {
     const client = await getClient();
