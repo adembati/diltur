@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Turları - Keşfet, Gez, Yaşa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <svg class="logo-icon" viewBox="0 0 100 100" width="40" height="40">
+                    <path d="M50 10 L60 40 L90 40 L67 60 L77 90 L50 70 L23 90 L33 60 L10 40 L40 40 Z" fill="#C41E3A"/>
+                </svg>
+                <span class="logo-text">Türkiye<br><small>TURLARI</small></span>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                <a href="turlar.html" class="nav-link">Turlar</a>
+                <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="favorite-btn">♡</a>
+                <button class="contact-btn">İletişim Geç</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Türkiye'yi<br>Keşfetmenin<br>En Güzel Yolu</h1>
+                    <p>Essiz destinasyonlarla, unutulmaz anılar ve konforlu turlar ile Türkiye'nin güzelliklerini keşfedin.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="window.location.href='turlar.html'">Turlarımızı Keşfet →</button>
+                        <button class="btn btn-secondary">Bize Ulaşın ○</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tours Section -->
+    <section class="popular-tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popüler Turlarımız</h2>
+                <p>Türkiye'nin en çok tercih edilen turlarını keşfedin.</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('images/card-cappadocia.jpg');">
+                        <div class="tour-badge">Popüler</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Kapadokya Turu</h3>
+                        <p>Peri bacaları, yılı altı şehirleri ve büyüleyen manzaralar sizi bekliyor.</p>
+                        <div class="tour-info">
+                            <span class="duration">⏱ 3 Gece 4 Gün</span>
+                            <span class="price">5.490 TL</span>
+                        </div>
+                        <button class="btn btn-outline">Turu İncele →</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('images/card-trabzon.jpg');">
+                        <div class="tour-badge">İndirimli</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Trabzon Turu</h3>
+                        <p>Doğaş, yayıların ve tarihi Karadeniz'in büyüsünü keşfedin.</p>
+                        <div class="tour-info">
+                            <span class="duration">⏱ 3 Gece 4 Gün</span>
+                            <span class="price">5.490 TL</span>
+                        </div>
+                        <button class="btn btn-outline">Turu İncele →</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('images/card-istanbul.jpg');">
+                        <div class="tour-badge">Yeni</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>İstanbul Turu</h3>
+                        <p>Tarihi yarımada, Boğaz turu ve eşsiz kültürel mirası deneyimi.</p>
+                        <div class="tour-info">
+                            <span class="duration">⏱ 2 Gece 3 Gün</span>
+                            <span class="price">4.290 TL</span>
+                        </div>
+                        <button class="btn btn-outline">Turu İncele →</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('images/card-bursa.jpg');">
+                        <div class="tour-badge">Tercih Edilen</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Bursa Turu</h3>
+                        <p>Osmanlı'nın iki başkenti Bursa'yı doğal güzellikleriyle keşfedin.</p>
+                        <div class="tour-info">
+                            <span class="duration">⏱ 2 Gece 3 Gün</span>
+                            <span class="price">3.990 TL</span>
+                        </div>
+                        <button class="btn btn-outline">Turu İncele →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Education Section -->
+    <section class="language-section">
+        <div class="container">
+            <div class="language-content">
+                <div class="language-text">
+                    <h2>Dil Eğitimi</h2>
+                    <p class="subtitle">Geleceğinize Yatırım Yapın</p>
+                    <p>Yurt içi ve yurt dışında kaliteli dil eğitimi programları ile kendinizi geliştirin, dünyaya açılın.</p>
+                    <div class="language-features">
+                        <div class="feature">
+                            <span class="feature-icon">🌍</span>
+                            <div>
+                                <h4>Yurt Dışı Dil Okulları</h4>
+                                <p>Dünyanın en iyi dil okullarında eğitim alın</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <div>
+                                <h4>Alanında Uzman Öğretmenler</h4>
+                                <p>Deneyimli öğretmenlerden öğrenim yapın</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📋</span>
+                            <div>
+                                <h4>Uluslararası Sertifikalar</h4>
+                                <p>Dünyada geçerli sertifikalar almış olun</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🏡</span>
+                            <div>
+                                <h4>Konaklama Seçenekleri</h4>
+                                <p>Güvenli ve konforlu yerler bulun</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="window.location.href='iletisim.html'">Dil Programlarını İncele →</button>
+                </div>
+                <div class="language-image">
+                    <img class="language-photo" src="images/lang-study.jpg" alt="Bir grup öğrenci dil eğitimi programında birlikte çalışıyor">
+                    <div class="chat-bubbles">
+                        <div class="bubble bubble-1">Hello!</div>
+                        <div class="bubble bubble-2">Bonjour!</div>
+                        <div class="bubble bubble-3">Merhaba!</div>
+                        <div class="bubble bubble-4">¡Hola!</div>
+                        <div class="bubble bubble-5">Ciao!</div>
+                        <div class="bubble bubble-6">Hallo!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Neden Bizi Seçmelisiniz?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon-large">🛡️</div>
+                    <h3>Güvenli Rezervasyon</h3>
+                    <p>%100 güvenli ödeme sistemi</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-large">🎧</div>
+                    <h3>7/24 Destek</h3>
+                    <p>Size her zaman yardımcı olmaya hazırız</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-large">💰</div>
+                    <h3>En Uygun Fiyat</h3>
+                    <p>En iyi fiyat garantisi sunuyoruz</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-large">👥</div>
+                    <h3>Memnun Müşteriler</h3>
+                    <p>Binlece mutlu seyahatçı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Haberlerimize Abone Olun</h2>
+            <p>Son dakika turları, ipuçları ve özel teklifleri doğrudan gelen kutunuza alın</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="E-posta adresinizi girin" required>
+                <button type="submit" class="btn btn-primary">Abone Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Türkiye Turları</h4>
+                    <p>Türkiye'nin en güzel yerlerini keşfetmek için bize katılın.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="turlar.html">Turlar</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p>📞 +90 212 123 45 67</p>
+                    <p>📧 info@turkiyeturlari.com</p>
+                    <p>📍 İstanbul, Türkiye</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Türkiye Turları. Tüm hakları saklıdır.</p>
+                <p class="photo-credits">Fotoğraflar: <a href="https://commons.wikimedia.org/wiki/Category:T%C3%BCrkiye" target="_blank" rel="noopener">Wikimedia Commons</a> (Mygeorgianguide, Babbsack, Veselina Dzhingarova, Beñat Irasuegi, Dat doris, Serhio Magpie, Pvasiliadis, Emre Dokur — CC BY / CC BY-SA) ve <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> (Ivan S)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

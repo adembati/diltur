@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Türkiye Turları</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <svg class="logo-icon" viewBox="0 0 100 100" width="40" height="40">
+                    <path d="M50 10 L60 40 L90 40 L67 60 L77 90 L50 70 L23 90 L33 60 L10 40 L40 40 Z" fill="#C41E3A"/>
+                </svg>
+                <span class="logo-text">Türkiye<br><small>TURLARI</small></span>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="turlar.html" class="nav-link">Turlar</a>
+                <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link active">İletişim</a>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="favorite-btn">♡</a>
+                <button class="contact-btn">İletişim Geç</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>İletişim</h1>
+            <p>Bize ulaşın, sorularınızı cevaplamaktan mutlu olacağız</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p>+90 212 123 45 67</p>
+                    <p>+90 212 987 65 43</p>
+                    <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">📧</div>
+                    <h3>E-Posta</h3>
+                    <p><a href="mailto:info@turkiyeturlari.com">info@turkiyeturlari.com</a></p>
+                    <p><a href="mailto:reservasyon@turkiyeturlari.com">reservasyon@turkiyeturlari.com</a></p>
+                    <p>Sorularınız en kısa sürede cevaplandırılacaktır</p>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">📍</div>
+                    <h3>Adres</h3>
+                    <p>Türkiye Turları Merkezi</p>
+                    <p>Taksim, İstanbul, Türkiye</p>
+                    <p>Çalışma Saatleri: 09:00 - 18:00</p>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">💬</div>
+                    <h3>Canlı Sohbet</h3>
+                    <p>7/24 müşteri desteği</p>
+                    <p>Web sitesi üzerinden canlı sohbete başlayın</p>
+                    <button class="btn btn-primary" onclick="alert('Canlı sohbet başlatıldı!')">Başlat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-text">
+                    <h2>Bize Yazın</h2>
+                    <p>Sorularınız, önerileriniz veya tüm geri bildirimleriniz için formu doldurun.</p>
+                    <div class="form-benefits">
+                        <p><strong>✓</strong> Hızlı cevap garantisi</p>
+                        <p><strong>✓</strong> Özel teklifler ve indirimler</p>
+                        <p><strong>✓</strong> Kişiselleştirilmiş tur önerileri</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label>Ad Soyad *</label>
+                        <input type="text" placeholder="Adınızı ve soyadınızı girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-Posta *</label>
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon *</label>
+                        <input type="tel" placeholder="Telefon numaranız" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Konu *</label>
+                        <select required>
+                            <option>Konu seçin</option>
+                            <option>Tur Hakkında Bilgi</option>
+                            <option>Rezervasyon</option>
+                            <option>Teknik Sorun</option>
+                            <option>Geri Bildirim</option>
+                            <option>Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>İlgilendiğiniz Tur (Opsiyonel)</label>
+                        <select>
+                            <option>Tur seçin</option>
+                            <option>Kapadokya Turu</option>
+                            <option>Trabzon Turu</option>
+                            <option>İstanbul Turu</option>
+                            <option>Bursa Turu</option>
+                            <option>Antalya Turu</option>
+                            <option>Bodrum Turu</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Mesaj *</label>
+                        <textarea placeholder="Mesajınızı girin" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" required>
+                            Gizlilik Politikasını kabul ediyorum
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Sık Sorulan Sorular</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Erken Ödeme Yaparsam İndirim Var mı?</h3>
+                    <p>Evet, en az 2 ay öncesinden ödeme yapan müşterilerimize %5-10 indirim sunmaktayız.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Gruplara Özel Indirim Var mı?</h3>
+                    <p>Evet, 10 ve üzeri kişilik gruplar için özel indirimler mevcuttur. Lütfen iletişime geçin.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Iptal Yapabilirim mi?</h3>
+                    <p>Evet, tur tarihinden en az 7 gün önce iptal edebilirsiniz. Koşullara göre iade mevcuttur.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Visa ve Sigortalar Dahil mi?</h3>
+                    <p>Hayır, visa ve sigortalar paket dışıdır. Ancak destek sağlayabiliriz.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Çocuklar İçin Özel Fiyat Var mı?</h3>
+                    <p>Evet, 12 yaşına kadar çocuklar için %20 indirim uygulanmaktadır.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Ön Ödeme Yapmalı mıyım?</h3>
+                    <p>Evet, rezervasyon için %50 ön ödeme gerekmektedir. Kalan tutar tur başlamadan ödenir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Bize Ziyaret Edin</h2>
+            <p>İstanbul Taksim'de bulunan ofisimize gelebilirsiniz</p>
+            <div class="map-placeholder">
+                <p>📍 Taksim, İstanbul, Türkiye</p>
+                <p>Harita burada gösterilecek</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Türkiye Turları</h4>
+                    <p>Türkiye'nin en güzel yerlerini keşfetmek için bize katılın.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="turlar.html">Turlar</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <p>📞 +90 212 123 45 67</p>
+                    <p>📧 info@turkiyeturlari.com</p>
+                    <p>📍 İstanbul, Türkiye</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Türkiye Turları. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

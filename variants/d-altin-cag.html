@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Türkiye Turları — Yön D: Altın Çağ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F1E4C9;
+    --cream-2:#EADCBC;
+    --black:#17130D;
+    --black-2:#211B12;
+    --sun:#D9551E;
+    --sun-bright:#E8722F;
+    --gold:#E3A23C;
+    --ink:#1D1710;
+    --ink-dim:#5B5138;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:1220px;margin:0 auto;padding:0 40px;}
+  h1,h2,h3,.disp{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.005em;line-height:0.92;color:var(--ink);}
+  a{color:inherit;}
+  .photo{position:relative;}
+  .warm-wash{display:none;}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(241,228,201,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(29,23,16,0.12);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;}
+  .brand .dot{width:14px;height:14px;border-radius:50%;background:var(--sun);}
+  .nav-links{display:flex;gap:32px;list-style:none;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;}
+  .nav-links a{text-decoration:none;color:var(--ink-dim);transition:color .3s;}
+  .nav-links a:hover{color:var(--sun);}
+  .cta-mini{background:var(--gold);color:var(--black);padding:11px 24px;border-radius:99px;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;text-decoration:none;transition:all .3s;}
+  .cta-mini:hover{background:var(--sun-bright);color:#fff;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;height:62vh;min-height:460px;max-height:560px;display:flex;align-items:flex-end;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg, rgba(23,19,13,0.75) 0%, rgba(23,19,13,0.2) 45%, transparent 70%), linear-gradient(90deg, rgba(23,19,13,0.55) 0%, transparent 45%);}
+  .hero-inner{position:relative;z-index:2;padding:0 0 64px;width:100%;}
+  .vertical-tag{position:absolute;top:60px;right:48px;writing-mode:vertical-rl;color:var(--cream);font-size:0.85rem;letter-spacing:0.3em;z-index:2;opacity:0.85;}
+  .seal{position:absolute;left:40px;bottom:52px;width:52px;height:52px;border-radius:50%;background:var(--sun);z-index:3;display:flex;align-items:center;justify-content:center;color:var(--cream);font-family:'Big Shoulders Display',sans-serif;font-size:0.6rem;letter-spacing:0.03em;text-align:center;line-height:1.1;box-shadow:0 8px 20px rgba(0,0,0,0.4);}
+  .hero-eyebrow{color:var(--gold);font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:14px;font-weight:600;}
+  .hero h1{color:var(--cream);font-size:clamp(2.6rem,6.5vw,5.2rem);margin-bottom:10px;}
+  .hero .loc{color:var(--sun-bright);font-family:'Big Shoulders Display',sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:700;text-transform:uppercase;margin-bottom:18px;}
+  .hero p{color:var(--cream-2);max-width:420px;font-size:0.98rem;opacity:0.9;}
+
+  /* split / agenda-style */
+  .split{display:grid;grid-template-columns:0.85fr 1.15fr;}
+  .split-panel{background:var(--black);color:var(--cream);padding:80px 56px;display:flex;flex-direction:column;justify-content:center;}
+  .split-panel .disp{font-size:clamp(2rem,3.4vw,2.8rem);color:var(--cream);margin-bottom:16px;}
+  .split-panel p{color:#B8AC8E;margin-bottom:34px;max-width:380px;}
+  .reason-list{display:flex;flex-direction:column;gap:22px;}
+  .reason{display:flex;gap:18px;align-items:baseline;border-top:1px solid rgba(241,228,201,0.15);padding-top:18px;}
+  .reason .num{font-family:'Big Shoulders Display',sans-serif;font-size:1.6rem;color:var(--sun-bright);font-weight:700;}
+  .reason strong{display:block;color:var(--cream);font-size:1rem;margin-bottom:4px;}
+  .reason span{color:#9C917A;font-size:0.88rem;}
+  .split-photo{position:relative;min-height:420px;}
+  .split-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+
+  /* tours as portrait gallery */
+  .tours{padding:110px 0 100px;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:20px;}
+  .section-head .disp{font-size:clamp(2rem,3.6vw,3rem);}
+  .section-head p{color:var(--ink-dim);max-width:320px;}
+  .tour-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .tour-card{text-decoration:none;color:var(--ink);}
+  .tour-photo{position:relative;aspect-ratio:3/4;overflow:hidden;margin-bottom:16px;}
+  .tour-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .tour-card:hover .tour-photo img{transform:scale(1.07);}
+  .tour-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg, rgba(23,19,13,0.55) 0%, transparent 40%);}
+  .tour-photo .price-tag{position:absolute;bottom:12px;left:12px;color:var(--cream);font-family:'Big Shoulders Display',sans-serif;font-size:1.15rem;font-weight:700;z-index:2;}
+  .tour-cat{color:var(--sun);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:4px;}
+  .tour-card h3{font-size:1.35rem;margin-bottom:6px;}
+  .tour-card .dur{color:var(--ink-dim);font-size:0.85rem;}
+
+  /* installations-style tiles */
+  .tiles{padding:0 0 110px;}
+  .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .tile{background:var(--cream-2);border:1px solid rgba(29,23,16,0.1);padding:0;overflow:hidden;}
+  .tile-img{aspect-ratio:1/1;overflow:hidden;position:relative;}
+  .tile-img img{width:100%;height:100%;object-fit:cover;}
+  .tile-body{padding:22px 22px 26px;}
+  .tile-body h3{font-size:1.1rem;margin-bottom:4px;}
+  .tile-body p{color:var(--ink-dim);font-size:0.85rem;}
+
+  /* manifesto block */
+  .manifesto{display:grid;grid-template-columns:1fr 1fr;background:var(--sun);color:var(--cream);}
+  .manifesto-text{padding:100px 64px;display:flex;flex-direction:column;justify-content:center;}
+  .manifesto-text .tag{font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;opacity:0.85;margin-bottom:20px;font-weight:700;}
+  .manifesto-text .disp{font-size:clamp(1.9rem,3.4vw,2.7rem);color:#fff;margin-bottom:24px;}
+  .manifesto-text a{color:#fff;text-decoration:underline;font-weight:600;font-size:0.92rem;}
+  .manifesto-photo{position:relative;min-height:380px;}
+  .manifesto-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+
+  /* cta band */
+  .cta-band{padding:90px 0;background:var(--cream);}
+  .cta-band-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:40px;border-top:1px solid rgba(29,23,16,0.15);padding-top:56px;}
+  .cta-band .disp{font-size:clamp(1.8rem,3vw,2.4rem);max-width:480px;}
+  .cta-chips{display:flex;gap:12px;flex-wrap:wrap;}
+  .chip{border:1px solid rgba(29,23,16,0.25);padding:8px 18px;border-radius:99px;font-size:0.82rem;color:var(--ink-dim);}
+  .big-cta{background:var(--sun);color:#fff;padding:22px 40px;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:1.15rem;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:12px;transition:all .35s;}
+  .big-cta:hover{background:var(--ink);transform:translateY(-2px);}
+
+  footer{background:var(--black);color:#8C816A;padding:32px 0;}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;flex-wrap:wrap;gap:16px;}
+  .foot-row strong{color:var(--cream);font-family:'Big Shoulders Display',sans-serif;text-transform:uppercase;}
+
+  @media (max-width:900px){
+    .split,.manifesto{grid-template-columns:1fr;}
+    .tour-grid{grid-template-columns:repeat(2,1fr);}
+    .tile-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand"><span class="dot"></span>Türkiye Turları</div>
+      <ul class="nav-links">
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Turlar</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <a href="#" class="cta-mini">İletişim Geç →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="photo" src="../images/hero-cappadocia.jpg" alt="Kapadokya sıcak hava balonları"><span class="warm-wash"></span>
+  <div class="vertical-tag">KEŞFET · GEZ · YAŞA</div>
+  <span class="seal">EST.<br>2010</span>
+  <div class="hero-inner">
+    <div class="container">
+      <div class="hero-eyebrow">Türkiye Turları — Keşif Rehberi</div>
+      <h1>Türkiye'yi<br>Keşfet</h1>
+      <div class="loc">Kapadokya · 2026 Sezonu</div>
+      <p>Sekiz destinasyon, uzman rehberler ve entegre dil eğitimi programlarıyla Türkiye'nin en güzel yolculuğuna çıkın.</p>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="split-panel">
+    <div class="disp">Neden<br>Biz?</div>
+    <p>On yılı aşkın deneyim, elli üzeri rota ve yüzlerce profesyonel rehberle Türkiye'yi en doğru şekilde keşfetmenizi sağlıyoruz.</p>
+    <div class="reason-list">
+      <div class="reason"><span class="num">01</span><div><strong>Güvenli Rezervasyon</strong><span>%100 güvenli ödeme sistemi</span></div></div>
+      <div class="reason"><span class="num">02</span><div><strong>7/24 Destek</strong><span>Size her zaman yardımcı olmaya hazırız</span></div></div>
+      <div class="reason"><span class="num">03</span><div><strong>Dil Eğitimi Entegrasyonu</strong><span>Tur ve eğitim programları bir arada</span></div></div>
+    </div>
+  </div>
+  <div class="split-photo"><img class="photo" src="../images/card-pamukkale.jpg" alt="Pamukkale"><span class="warm-wash"></span></div>
+</section>
+
+<section class="tours">
+  <div class="container">
+    <div class="section-head">
+      <div class="disp">Popüler<br>Turlarımız</div>
+      <p>Türkiye'nin en çok tercih edilen dört rotası — her biri kendi karakterinde.</p>
+    </div>
+    <div class="tour-grid">
+      <a href="#" class="tour-card">
+        <div class="tour-photo"><img class="photo" src="../images/card-cappadocia.jpg" alt="Kapadokya"><span class="warm-wash"></span><span class="price-tag">5.490 TL</span></div>
+        <div class="tour-cat">Popüler · 3 Gece 4 Gün</div>
+        <h3>Kapadokya</h3>
+        <div class="dur">Peri bacaları ve balon turu</div>
+      </a>
+      <a href="#" class="tour-card">
+        <div class="tour-photo"><img class="photo" src="../images/card-trabzon.jpg" alt="Trabzon"><span class="warm-wash"></span><span class="price-tag">5.490 TL</span></div>
+        <div class="tour-cat">İndirimli · 3 Gece 4 Gün</div>
+        <h3>Trabzon</h3>
+        <div class="dur">Sumela ve Uzungöl</div>
+      </a>
+      <a href="#" class="tour-card">
+        <div class="tour-photo"><img class="photo" src="../images/card-istanbul.jpg" alt="İstanbul"><span class="warm-wash"></span><span class="price-tag">4.290 TL</span></div>
+        <div class="tour-cat">Yeni · 2 Gece 3 Gün</div>
+        <h3>İstanbul</h3>
+        <div class="dur">Tarihi yarımada</div>
+      </a>
+      <a href="#" class="tour-card">
+        <div class="tour-photo"><img class="photo" src="../images/card-bursa.jpg" alt="Bursa"><span class="warm-wash"></span><span class="price-tag">3.990 TL</span></div>
+        <div class="tour-cat">Tercih Edilen · 2 Gece 3 Gün</div>
+        <h3>Bursa</h3>
+        <div class="dur">Osmanlı'nın izinde</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tiles">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:40px;">
+      <div class="disp" style="font-size:clamp(1.7rem,3vw,2.3rem);">Dil Eğitimi<br>Programları</div>
+      <p>Geleceğinize yatırım yapın — turla birlikte, dünyaya açılın.</p>
+    </div>
+    <div class="tile-grid">
+      <div class="tile">
+        <div class="tile-img"><img class="photo" src="../images/lang-study.jpg" alt="Yurt dışı dil okulları"><span class="warm-wash"></span></div>
+        <div class="tile-body"><h3>Yurt Dışı Dil Okulları</h3><p>Dünyanın en iyi okullarında eğitim</p></div>
+      </div>
+      <div class="tile">
+        <div class="tile-img"><img class="photo" src="../images/card-efes.jpg" alt="Uluslararası sertifikalar"><span class="warm-wash"></span></div>
+        <div class="tile-body"><h3>Uluslararası Sertifikalar</h3><p>Dünyada geçerli belgeler alın</p></div>
+      </div>
+      <div class="tile">
+        <div class="tile-img"><img class="photo" src="../images/card-antalya.jpg" alt="Konaklama seçenekleri"><span class="warm-wash"></span></div>
+        <div class="tile-body"><h3>Konaklama Seçenekleri</h3><p>Güvenli ve konforlu yerler</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="manifesto-text">
+    <div class="tag">Manifesto</div>
+    <div class="disp">"Türkiye'yi keşfetmenin<br>en güzel yolu,<br>birlikte tasarlanan<br>bir yolculuktur."</div>
+    <a href="#">Hikayemizi Okuyun →</a>
+  </div>
+  <div class="manifesto-photo"><img class="photo" src="../images/card-bodrum.jpg" alt="Bodrum"><span class="warm-wash"></span></div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band-inner">
+      <div class="disp">Yolculuğunuzu<br>Bugün Planlayın</div>
+      <div class="cta-chips">
+        <span class="chip">Kapadokya</span>
+        <span class="chip">Ege</span>
+        <span class="chip">Karadeniz</span>
+        <span class="chip">Dil Programı</span>
+      </div>
+      <a href="#" class="big-cta">Turları Keşfet →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-row">
+      <strong>Türkiye Turları</strong>
+      <span>Yön D — Altın Çağ (pinned: neo-mirai tarzı uyarlaması) · karşılaştırma taslağı</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
