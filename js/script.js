@@ -18,33 +18,10 @@ if (hamburger) {
     });
 }
 
-// ==================== Newsletter Form ==================== 
-const newsletterForms = document.querySelectorAll('.newsletter-form');
+// ==================== Newsletter & Contact Forms ====================
+// js/app.js (Supabase entegrasyonu) bu formları yönetir.
 
-newsletterForms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = form.querySelector('input[type="email"]').value;
-        alert(`${email} e-posta adresiniz başarıyla kaydedildi!`);
-        form.reset();
-    });
-});
-
-// ==================== Contact Form ==================== 
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        
-        alert(`Teşekkürler ${name}! Mesajınız başarıyla gönderildi. En kısa sürede yanıt vereceğiz.`);
-        contactForm.reset();
-    });
-}
-
-// ==================== Smooth Scroll ==================== 
+// ==================== Smooth Scroll ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

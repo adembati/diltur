@@ -14,9 +14,25 @@ diltur/
 ├── css/
 │   └── style.css          # Tüm CSS stilleri
 ├── js/
-│   └── script.js          # JavaScript fonksiyonları
+│   ├── script.js          # UI davranışları (menü, animasyonlar)
+│   ├── supabase-client.js # Supabase bağlantısı ve veri fonksiyonları
+│   └── app.js              # Turlar/blog render + form gönderimleri
+├── supabase/
+│   ├── schema.sql          # Veritabanı tabloları ve RLS politikaları
+│   └── seed.sql            # Başlangıç verisi (8 tur, 6 blog yazısı)
 └── README.md              # Bu dosya
 ```
+
+## 🗄️ Veritabanı Kurulumu (Supabase)
+
+Site, tur/blog içeriğini ve form gönderimlerini (iletişim, newsletter, rezervasyon) [Supabase](https://supabase.com) üzerinde tutar. Kurulum için:
+
+1. [supabase.com](https://supabase.com)'da ücretsiz bir proje oluşturun.
+2. Proje panelinde **SQL Editor**'ü açın, sırasıyla `supabase/schema.sql` ve `supabase/seed.sql` dosyalarının içeriğini yapıştırıp çalıştırın.
+3. **Project Settings → API** sayfasından `Project URL` ve `anon public` key'i kopyalayın.
+4. `js/supabase-client.js` dosyasının en üstündeki `SUPABASE_URL` ve `SUPABASE_ANON_KEY` değerlerini bu bilgilerle doldurun.
+
+Bu iki değer doldurulana kadar turlar/blog bölümleri "yükleniyor" mesajı gösterir; formlar ise hata verir. Site `file://` ile değil, bir HTTP sunucusu üzerinden açılmalıdır (aşağıdaki "Başlangıç" bölümüne bakın) — modül script'leri tarayıcılar tarafından dosya protokolünden çalıştırılmaz.
 
 ## 🎨 Sayfalar
 
@@ -144,9 +160,9 @@ Website dinamik olacak şekilde tasarlanmıştır. Aşağıdaki bölümleri kola
 ## 💡 Gelecek Güncellemeler
 
 - [ ] Online ödeme sistemi entegrasyonu
-- [ ] Veritabanı entegrasyonu
+- [x] Veritabanı entegrasyonu (Supabase — bkz. "Veritabanı Kurulumu")
 - [ ] Kullanıcı hesapları
-- [ ] Dinamik tur rezervasyonu
+- [x] Dinamik tur rezervasyonu (rezervasyon talebi formu → `bookings` tablosu)
 - [ ] Multi-dil desteği
 - [ ] Admin paneli
 

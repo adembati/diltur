@@ -1225,6 +1225,77 @@ section {
     margin-right: 10px;
 }
 
+/* ==================== Booking Modal ==================== */
+.db-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 48px 24px;
+    font-size: 1rem;
+}
+
+.booking-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 38, 52, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.booking-modal-overlay.open {
+    display: flex;
+}
+
+.booking-modal {
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+}
+
+.booking-modal h3 {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.booking-modal-tour {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.booking-modal #bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.booking-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--bg-secondary);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.booking-modal-close:hover {
+    background: var(--border-light);
+}
+
 /* ==================== FAQ Section ==================== */
 .faq-section {
     background: var(--bg-secondary);

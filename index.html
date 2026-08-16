@@ -6,7 +6,7 @@
     <title>Türkiye Turları - Keşfet, Gez, Yaşa</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -58,66 +58,8 @@
                 <h2>Popüler Turlarımız</h2>
                 <p>Türkiye'nin en çok tercih edilen turlarını keşfedin.</p>
             </div>
-            <div class="tours-grid">
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-cappadocia.jpg');">
-                        <div class="tour-badge">Popüler</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Kapadokya Turu</h3>
-                        <p>Peri bacaları, yılı altı şehirleri ve büyüleyen manzaralar sizi bekliyor.</p>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 3 Gece 4 Gün</span>
-                            <span class="price">5.490 TL</span>
-                        </div>
-                        <button class="btn btn-outline">Turu İncele →</button>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-trabzon.jpg');">
-                        <div class="tour-badge">İndirimli</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Trabzon Turu</h3>
-                        <p>Doğaş, yayıların ve tarihi Karadeniz'in büyüsünü keşfedin.</p>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 3 Gece 4 Gün</span>
-                            <span class="price">5.490 TL</span>
-                        </div>
-                        <button class="btn btn-outline">Turu İncele →</button>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-istanbul.jpg');">
-                        <div class="tour-badge">Yeni</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>İstanbul Turu</h3>
-                        <p>Tarihi yarımada, Boğaz turu ve eşsiz kültürel mirası deneyimi.</p>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">4.290 TL</span>
-                        </div>
-                        <button class="btn btn-outline">Turu İncele →</button>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-bursa.jpg');">
-                        <div class="tour-badge">Tercih Edilen</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Bursa Turu</h3>
-                        <p>Osmanlı'nın iki başkenti Bursa'yı doğal güzellikleriyle keşfedin.</p>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">3.990 TL</span>
-                        </div>
-                        <button class="btn btn-outline">Turu İncele →</button>
-                    </div>
-                </div>
+            <div class="tours-grid" id="toursGrid">
+                <p class="db-status">Turlar yükleniyor...</p>
             </div>
         </div>
     </section>
@@ -128,35 +70,49 @@
             <div class="language-content">
                 <div class="language-text">
                     <h2>Dil Eğitimi</h2>
-                    <p class="subtitle">Geleceğinize Yatırım Yapın</p>
-                    <p>Yurt içi ve yurt dışında kaliteli dil eğitimi programları ile kendinizi geliştirin, dünyaya açılın.</p>
+                    <p class="subtitle">Türkiye'de Türkçe Öğrenin</p>
+                    <p>15 günlük ve 1 aylık yoğun Türkçe dil programlarımızla, kültürel gezilerle zenginleştirilmiş etkili bir öğrenme deneyimi yaşayın.</p>
                     <div class="language-features">
                         <div class="feature">
-                            <span class="feature-icon">🌍</span>
+                            <span class="feature-icon">⏱️</span>
                             <div>
-                                <h4>Yurt Dışı Dil Okulları</h4>
-                                <p>Dünyanın en iyi dil okullarında eğitim alın</p>
+                                <h4>15 Günlük Yoğun Türkçe</h4>
+                                <p>Kısa sürede etkili öğrenme</p>
                             </div>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">👥</span>
+                            <span class="feature-icon">📅</span>
                             <div>
-                                <h4>Alanında Uzman Öğretmenler</h4>
-                                <p>Deneyimli öğretmenlerden öğrenim yapın</p>
+                                <h4>1 Aylık Türkçe Programı</h4>
+                                <p>Daha fazla pratik, daha iyi sonuç</p>
                             </div>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">📋</span>
+                            <span class="feature-icon">💬</span>
                             <div>
-                                <h4>Uluslararası Sertifikalar</h4>
-                                <p>Dünyada geçerli sertifikalar almış olun</p>
+                                <h4>Konuşma Odaklı Eğitim</h4>
+                                <p>Günlük hayatta Türkçe kullanımı</p>
                             </div>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">🏡</span>
+                            <span class="feature-icon">📜</span>
                             <div>
-                                <h4>Konaklama Seçenekleri</h4>
-                                <p>Güvenli ve konforlu yerler bulun</p>
+                                <h4>Sertifika</h4>
+                                <p>Program sonunda sertifika alın</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✈️</span>
+                            <div>
+                                <h4>Havalimanı Karşılama</h4>
+                                <p>Güvenli ve konforlu ulaşım</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🏠</span>
+                            <div>
+                                <h4>Konaklama Desteği</h4>
+                                <p>Türk aile yanında veya yurtta kalın</p>
                             </div>
                         </div>
                     </div>
@@ -259,5 +215,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

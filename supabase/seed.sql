@@ -1,0 +1,20 @@
+-- Türkiye Turları — başlangıç verisi
+-- schema.sql'den sonra Supabase Dashboard → SQL Editor içinde çalıştırın.
+
+insert into tours (slug, title, location, description, image_url, badge, rating, review_count, duration, price, highlights, is_featured, display_order) values
+('kapadokya', 'Kapadokya Turu', 'Kapadokya', 'Peri bacaları, yılı altı şehirleri ve büyüleyen manzaralar sizi bekliyor. Sıcak hava balonu ile harika deneyimler yaşayın.', 'images/card-cappadocia.jpg', 'Popüler', 4.8, 120, '3 Gece 4 Gün', 5490, array['🎈 Sıcak Hava Balonu', '🏰 Tarihi Yerler', '🌄 Doğa Gezisi'], true, 1),
+('trabzon', 'Trabzon Turu', 'Trabzon', 'Doğaş, yayıların ve tarihi Karadeniz''in büyüsünü keşfedin. Sumela Manastırı ve Uzungöl''ü ziyaret edin.', 'images/card-trabzon.jpg', 'İndirimli', 4.7, 95, '3 Gece 4 Gün', 4890, array['🏛️ Sumela Manastırı', '🏞️ Uzungöl', '⛰️ Dağ Yürüyüşü'], true, 2),
+('istanbul', 'İstanbul Turu', 'İstanbul', 'Tarihi yarımada, Boğaz turu ve eşsiz kültürel mirası deneyimi. Saraçhane''den Topkapı Sarayı''na kadar gezin.', 'images/card-istanbul.jpg', 'Yeni', 4.9, 200, '2 Gece 3 Gün', 3890, array['🕌 Tarihi Yarımada', '🚢 Boğaz Turu', '🛍️ Alışveriş'], true, 3),
+('bursa', 'Bursa Turu', 'Bursa', 'Osmanlı''nın iki başkenti Bursa''yı doğal güzellikleriyle keşfedin. Uludağ ve yeşil doğasında zaman geçirin.', 'images/card-bursa.jpg', 'Tercih Edilen', 4.6, 85, '2 Gece 3 Gün', 3290, array['🏔️ Uludağ', '♨️ Termal Kaynaklar', '🌳 Doğa'], true, 4),
+('antalya', 'Antalya Turu', 'Antalya', 'Akdeniz''in turkuazına dalın. Plajlar, eski şehir ve dağlık bölgelerle tatil yapın.', 'images/card-antalya.jpg', 'Yazlık', 4.7, 150, '4 Gece 5 Gün', 6490, array['🏖️ Plajlar', '🏞️ Düden Şelalesi', '🤿 Sualtı Sporları'], false, 5),
+('bodrum', 'Bodrum Turu', 'Bodrum', 'Ege''nin incisi Bodrum''da teknede kamp ve Mavi Yolculuk deneyimi yaşayın.', 'images/card-bodrum.jpg', 'Lüks', 4.9, 110, '5 Gece 6 Gün', 8990, array['⛵ Mavi Yolculuk', '🏯 Bodrum Kalesi', '🍽️ Gourmet Mutfak'], false, 6),
+('pamukkale', 'Pamukkale Turu', 'Pamukkale', 'Termal havuzlar ve Hiyeropolis antik kentinin hayranlık duyulan yer olarak kalması.', 'images/card-pamukkale.jpg', 'Doğal', 4.8, 140, '2 Gece 3 Gün', 3690, array['♨️ Termal Havuzlar', '🏛️ Hiyeropolis', '📸 Fotoğraf'], false, 7),
+('efes', 'Efes Turu', 'Efes', 'Antik dönemin harika mirası Efes''i keşfedin. Tarihin açık hava müzesi.', 'images/card-efes.jpg', 'Kültür', 4.7, 120, '2 Gece 3 Gün', 4190, array['🏛️ Efes Antik Kenti', '🏰 Meryem Ana''nın Evi', '📚 Arkeoloji'], false, 8);
+
+insert into blog_posts (slug, title, category, excerpt, image_url, author, published_at) values
+('kapadokya-balon-deneyimi', 'Kapadokya''da Sıcak Hava Balonu Deneyimi', 'Seyahat İpuçları', 'Kapadokya''da sıcak hava balonuyla uçarken neler yaşanır, nelere dikkat edilmesi gerekir? Tüm detayları bu yazımızda bulunuz.', 'images/card-cappadocia.jpg', 'Ahmet Şahin', '2024-08-16'),
+('trabzon-10-sey', 'Trabzon''da Yapılması Gereken 10 Şey', 'Gezi Rehberi', 'Sumela Manastırı, Uzungöl ve daha fazlası. Trabzon''da zaman geçirmek için en iyi aktiviteleri keşfedin.', 'images/card-trabzon.jpg', 'Melis Atalay', '2024-08-14'),
+('istanbul-tarihi-yarimada', 'İstanbul Tarihi Yarımada: Tam Rehber', 'Kültür', 'Ayasofya, Topkapı Sarayı, Mavi Cami ve daha birçok tarihi eseri keşfetmek için rehberimizi takip edin.', 'images/card-istanbul.jpg', 'Omer Kaplan', '2024-08-12'),
+('mavi-yolculuk', 'Mavi Yolculuk: Ege''nin Mücevheri', 'Lüks Seyahat', 'Bodrum''dan başlayan teknede kamp macerası. Adalar, kasabaların ve turkuazı suların tadını çıkarmak.', 'images/card-bodrum.jpg', 'Selin Yıldız', '2024-08-10'),
+('pamukkale-termal', 'Pamukkale Termal Havuzları: Cennet Köşe', 'Doğa', 'Doğanın yaratılışının harikası Pamukkale''de termal havuzlarda relaksasyon yapın ve Hiyeropolis''i ziyaret edin.', 'images/card-pamukkale.jpg', 'Ahmet Şahin', '2024-08-08'),
+('efes-antik-kenti', 'Efes Antik Kenti: Tarihin Açık Hava Müzesi', 'Arkeoloji', 'Antik Roma döneminin işaretleri taşıyan Efes''in bibliotek kütüphanesi, tiyatrosu ve daha fazlasını keşfedin.', 'images/card-efes.jpg', 'Melis Atalay', '2024-08-06');

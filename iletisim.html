@@ -6,7 +6,7 @@
     <title>İletişim - Türkiye Turları</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="contact">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -95,19 +95,19 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label>Ad Soyad *</label>
-                        <input type="text" placeholder="Adınızı ve soyadınızı girin" required>
+                        <input type="text" id="contactName" placeholder="Adınızı ve soyadınızı girin" required>
                     </div>
                     <div class="form-group">
                         <label>E-Posta *</label>
-                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <input type="email" id="contactEmail" placeholder="E-posta adresiniz" required>
                     </div>
                     <div class="form-group">
                         <label>Telefon *</label>
-                        <input type="tel" placeholder="Telefon numaranız" required>
+                        <input type="tel" id="contactPhone" placeholder="Telefon numaranız" required>
                     </div>
                     <div class="form-group">
                         <label>Konu *</label>
-                        <select required>
+                        <select id="contactSubject" required>
                             <option>Konu seçin</option>
                             <option>Tur Hakkında Bilgi</option>
                             <option>Rezervasyon</option>
@@ -118,7 +118,7 @@
                     </div>
                     <div class="form-group">
                         <label>İlgilendiğiniz Tur (Opsiyonel)</label>
-                        <select>
+                        <select id="contactTourInterest">
                             <option>Tur seçin</option>
                             <option>Kapadokya Turu</option>
                             <option>Trabzon Turu</option>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="form-group full-width">
                         <label>Mesaj *</label>
-                        <textarea placeholder="Mesajınızı girin" rows="6" required></textarea>
+                        <textarea id="contactMessage" placeholder="Mesajınızı girin" rows="6" required></textarea>
                     </div>
                     <div class="form-group">
                         <label>
@@ -229,5 +229,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

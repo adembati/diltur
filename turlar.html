@@ -6,7 +6,7 @@
     <title>Turlar - Türkiye Turları</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="tours">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -57,6 +57,8 @@
                         <option>Bursa</option>
                         <option>Antalya</option>
                         <option>Bodrum</option>
+                        <option>Pamukkale</option>
+                        <option>Efes</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -81,182 +83,8 @@
     <!-- Tours Grid -->
     <section class="tours-list">
         <div class="container">
-            <div class="tours-grid tours-grid-full">
-                <!-- Kapadokya -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-cappadocia.jpg');">
-                        <div class="tour-badge">Popüler</div>
-                        <div class="tour-rating">⭐ 4.8 (120 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Kapadokya Turu</h3>
-                        <p>Peri bacaları, yılı altı şehirleri ve büyüleyen manzaralar sizi bekliyor. Sıcak hava balonu ile harika deneyimler yaşayın.</p>
-                        <div class="tour-highlights">
-                            <span>🎈 Sıcak Hava Balonu</span>
-                            <span>🏰 Tarihi Yerler</span>
-                            <span>🌄 Doğa Gezisi</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 3 Gece 4 Gün</span>
-                            <span class="price">5.490 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Kapadokya Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Trabzon -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-trabzon.jpg');">
-                        <div class="tour-badge">İndirimli</div>
-                        <div class="tour-rating">⭐ 4.7 (95 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Trabzon Turu</h3>
-                        <p>Doğaş, yayıların ve tarihi Karadeniz'in büyüsünü keşfedin. Sumela Manastırı ve Uzungöl'ü ziyaret edin.</p>
-                        <div class="tour-highlights">
-                            <span>🏛️ Sumela Manastırı</span>
-                            <span>🏞️ Uzungöl</span>
-                            <span>⛰️ Dağ Yürüyüşü</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 3 Gece 4 Gün</span>
-                            <span class="price">4.890 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Trabzon Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- İstanbul -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-istanbul.jpg');">
-                        <div class="tour-badge">Yeni</div>
-                        <div class="tour-rating">⭐ 4.9 (200 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>İstanbul Turu</h3>
-                        <p>Tarihi yarımada, Boğaz turu ve eşsiz kültürel mirası deneyimi. Saraçhane'den Topkapı Sarayı'na kadar gezin.</p>
-                        <div class="tour-highlights">
-                            <span>🕌 Tarihi Yarımada</span>
-                            <span>🚢 Boğaz Turu</span>
-                            <span>🛍️ Alışveriş</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">3.890 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('İstanbul Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Bursa -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-bursa.jpg');">
-                        <div class="tour-badge">Tercih Edilen</div>
-                        <div class="tour-rating">⭐ 4.6 (85 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Bursa Turu</h3>
-                        <p>Osmanlı'nın iki başkenti Bursa'yı doğal güzellikleriyle keşfedin. Uludağ ve yeşil doğasında zaman geçirin.</p>
-                        <div class="tour-highlights">
-                            <span>🏔️ Uludağ</span>
-                            <span>♨️ Termal Kaynaklar</span>
-                            <span>🌳 Doğa</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">3.290 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Bursa Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Antalya -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-antalya.jpg');">
-                        <div class="tour-badge">Yazlık</div>
-                        <div class="tour-rating">⭐ 4.7 (150 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Antalya Turu</h3>
-                        <p>Akdeniz'in turkuazına dalın. Plajlar, eski şehir ve dağlık bölgelerle tatil yapın.</p>
-                        <div class="tour-highlights">
-                            <span>🏖️ Plajlar</span>
-                            <span>🏞️ Düden Şelalesi</span>
-                            <span>🤿 Sualtı Sporları</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 4 Gece 5 Gün</span>
-                            <span class="price">6.490 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Antalya Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Bodrum -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-bodrum.jpg');">
-                        <div class="tour-badge">Lüks</div>
-                        <div class="tour-rating">⭐ 4.9 (110 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Bodrum Turu</h3>
-                        <p>Ege'nin incisi Bodrum'da teknede kamp ve Mavi Yolculuk deneyimi yaşayın.</p>
-                        <div class="tour-highlights">
-                            <span>⛵ Mavi Yolculuk</span>
-                            <span>🏯 Bodrum Kalesi</span>
-                            <span>🍽️ Gourmet Mutfak</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 5 Gece 6 Gün</span>
-                            <span class="price">8.990 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Bodrum Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Pamukkale -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-pamukkale.jpg');">
-                        <div class="tour-badge">Doğal</div>
-                        <div class="tour-rating">⭐ 4.8 (140 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Pamukkale Turu</h3>
-                        <p>Termal havuzlar ve Hiyeropolis antik kentinin hayranlık duyulan yer olarak kalması.</p>
-                        <div class="tour-highlights">
-                            <span>♨️ Termal Havuzlar</span>
-                            <span>🏛️ Hiyeropolis</span>
-                            <span>📸 Fotoğraf</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">3.690 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Pamukkale Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
-
-                <!-- Efes -->
-                <div class="tour-card">
-                    <div class="tour-image" style="background-image: url('images/card-efes.jpg');">
-                        <div class="tour-badge">Kültür</div>
-                        <div class="tour-rating">⭐ 4.7 (120 yorum)</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Efes Turu</h3>
-                        <p>Antik dönemin harika mirası Efes'i keşfedin. Tarihin açık hava müzesi.</p>
-                        <div class="tour-highlights">
-                            <span>🏛️ Efes Antik Kenti</span>
-                            <span>🏰 Meryem Ana'nın Evi</span>
-                            <span>📚 Arkeoloji</span>
-                        </div>
-                        <div class="tour-info">
-                            <span class="duration">⏱ 2 Gece 3 Gün</span>
-                            <span class="price">4.190 TL</span>
-                        </div>
-                        <button class="btn btn-outline" onclick="alert('Efes Turuna başarıyla eklendi!')">Sepete Ekle</button>
-                    </div>
-                </div>
+            <div class="tours-grid tours-grid-full" id="toursGrid">
+                <p class="db-status">Turlar yükleniyor...</p>
             </div>
         </div>
     </section>
@@ -302,5 +130,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

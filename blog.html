@@ -6,7 +6,7 @@
     <title>Blog - Türkiye Turları</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="blog">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -46,96 +46,8 @@
     <!-- Blog Posts -->
     <section class="blog-section">
         <div class="container">
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-cappadocia.jpg');">
-                        <span class="blog-date">16 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Seyahat İpuçları</span>
-                        <h3>Kapadokya'da Sıcak Hava Balonu Deneyimi</h3>
-                        <p>Kapadokya'da sıcak hava balonuyla uçarken neler yaşanır, nelere dikkat edilmesi gerekir? Tüm detayları bu yazımızda bulunuz.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Ahmet Şahin</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-trabzon.jpg');">
-                        <span class="blog-date">14 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Gezi Rehberi</span>
-                        <h3>Trabzon'da Yapılması Gereken 10 Şey</h3>
-                        <p>Sumela Manastırı, Uzungöl ve daha fazlası. Trabzon'da zaman geçirmek için en iyi aktiviteleri keşfedin.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Melis Atalay</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-istanbul.jpg');">
-                        <span class="blog-date">12 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Kültür</span>
-                        <h3>İstanbul Tarihi Yarımada: Tam Rehber</h3>
-                        <p>Ayasofya, Topkapı Sarayı, Mavi Cami ve daha birçok tarihi eseri keşfetmek için rehberimizi takip edin.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Omer Kaplan</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-bodrum.jpg');">
-                        <span class="blog-date">10 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Lüks Seyahat</span>
-                        <h3>Mavi Yolculuk: Ege'nin Mücevheri</h3>
-                        <p>Bodrum'dan başlayan teknede kamp macerası. Adalar, kasabaların ve turkuazı suların tadını çıkarmak.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Selin Yıldız</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-pamukkale.jpg');">
-                        <span class="blog-date">8 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Doğa</span>
-                        <h3>Pamukkale Termal Havuzları: Cennet Köşe</h3>
-                        <p>Doğanın yaratılışının harikası Pamukkale'de termal havuzlarda relaksasyon yapın ve Hiyeropolis'i ziyaret edin.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Ahmet Şahin</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image" style="background-image: url('images/card-efes.jpg');">
-                        <span class="blog-date">6 Ağustos 2024</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Arkeoloji</span>
-                        <h3>Efes Antik Kenti: Tarihin Açık Hava Müzesi</h3>
-                        <p>Antik Roma döneminin işaretleri taşıyan Efes'in bibliotek kütüphanesi, tiyatrosu ve daha fazlasını keşfedin.</p>
-                        <div class="blog-footer">
-                            <span class="blog-author">Melis Atalay</span>
-                            <a href="#" class="read-more">Devamını Oku →</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="blog-grid" id="blogGrid">
+                <p class="db-status">Yazılar yükleniyor...</p>
             </div>
         </div>
     </section>
@@ -193,5 +105,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
