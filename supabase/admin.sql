@@ -35,7 +35,12 @@ as $$
     );
 $$;
 
--- ==================== Tours: admin yazma yetkisi ====================
+-- ==================== Tours: admin okuma/yazma yetkisi ====================
+-- Not: schema.sql'deki "Tours are publicly readable" politikası sadece `anon` rolüne
+-- uygulanır; giriş yapmış (authenticated) admin için ayrıca bir select politikası gerekir.
+drop policy if exists "Admins can read tours" on tours;
+create policy "Admins can read tours"
+    on tours for select to authenticated using (is_admin());
 drop policy if exists "Admins can insert tours" on tours;
 create policy "Admins can insert tours"
     on tours for insert to authenticated with check (is_admin());
@@ -46,7 +51,10 @@ drop policy if exists "Admins can delete tours" on tours;
 create policy "Admins can delete tours"
     on tours for delete to authenticated using (is_admin());
 
--- ==================== Blog Posts: admin yazma yetkisi ====================
+-- ==================== Blog Posts: admin okuma/yazma yetkisi ====================
+drop policy if exists "Admins can read blog posts" on blog_posts;
+create policy "Admins can read blog posts"
+    on blog_posts for select to authenticated using (is_admin());
 drop policy if exists "Admins can insert blog posts" on blog_posts;
 create policy "Admins can insert blog posts"
     on blog_posts for insert to authenticated with check (is_admin());
