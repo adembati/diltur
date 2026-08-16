@@ -57,7 +57,7 @@ loginForm.addEventListener('submit', async (e) => {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
     const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) showError('Giriş başarısız: e-posta veya şifre hatalı.');
+    if (error) showError(`Giriş başarısız: ${error.message}`);
 });
 
 logoutBtn.addEventListener('click', () => supabase.auth.signOut());
